@@ -6,17 +6,7 @@
 }
 html{
     height: 100%;
-    background-image: linear-gradient(to right bottom, var(--green), var(--second)), url('img/stadium.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+
 
 }
 body{
@@ -29,21 +19,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: 10; 
-    &::after {
-        content:"";
-        background-image: linear-gradient(to right bottom, var(--green), var(--second)), url('/img/stadium.jpg');
-        opacity: 0.5;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-    }
+    
 
 }
 .everything{
