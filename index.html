@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@200&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel='stylesheet' href="css/toggle.css">
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
 </head>
 <body>
     <div class="loader" id="load">
@@ -18,9 +20,20 @@
                 <img src='img/sport.jpg'><span>liverezultati</span>
             </a>
             <ul class='everything-header-nav'>
-                <li>Uzivo</li>
-                <li>O kreatoru</li>
-                <li>Javite nam see</li>
+                <li>Moje Utakmice</li>
+                <li class="social-icons">
+                    <a><ion-icon class="io facebook" name="logo-facebook"></ion-icon></a>
+                    <a><ion-icon class="io twiiter" name="logo-twitter"></ion-icon></a>
+                    <a><ion-icon class="io instagram" name="logo-instagram"></ion-icon></a>
+                </li>
+
+                <li class="toggle">
+                    <p>Promeni Temu</p>
+                    <label class="switch" >
+                    <input type="checkbox" id='toggle'>
+                    <span class="slider round"></span>
+                    </label>
+                </li>
             </ul>
         </header>
 
@@ -32,5 +45,6 @@
     </div>
     
     <script src="javascript/main.js"></script>
+    <script src='javascript/toggle.js'></script>
 </body>
 </html>

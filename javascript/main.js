@@ -27,7 +27,19 @@ const Teams=(t)=>{
 	team.innerText=t.homeTeam.name
 	let team2=document.createElement('div')
 	team2.className='container-match-result-seccond'
-	team2.innerText=t.awayTeam.name
+	team2.innerText=t.awayTeam.name;
+	if(team.innerText.length>16){
+		team.innerText=team.innerText.substring(0,15)+ "...";
+		team.classList.add('lower')
+	} else{
+		team.innerText.length>15?team.classList.add('lower'):team.classList.remove('lower')
+	}
+	if(team2.innerText.length>16){
+		team2.innerText=team.innerText.substring(0,15)+ "...";
+		team2.classList.add('lower')
+	} else{
+		team2.innerText.length>15?team.classList.add('lower'):team2.classList.remove('lower')
+	}
 	let result1=document.createElement('span');
 	result1.innerHTML=t.score.fullTime.homeTeam
 	let result2=document.createElement('span')
@@ -39,7 +51,6 @@ const Teams=(t)=>{
 	let hours=timeOfMatch.getHours();
 	let minutes=timeOfMatch.getMinutes()
 	minutes==0?minutes="00":minutes;
-	console.log(minutes)
 	time.innerText=hours+":"+minutes;
 	let spans=document.createElement('span')
 
@@ -89,10 +100,11 @@ const Comp=(competitions)=>{
 			check.push(comp[i].id)
 			}
 		}
-		,3000)
+		,1500)
 let loader=document.getElementById('load')
-window.addEventListener('load',()=>{
+/*window.addEventListener('load',()=>{
 	setTimeout(()=>{
 		loader.classList.add('hidden')
 	},3100)
-})
+})*/
+comp?loader.classList.add('hidden'):loader.classList.remove('hidden')
