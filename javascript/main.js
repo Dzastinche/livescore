@@ -4,14 +4,20 @@ let Today=new Date()
 let year=Today.getFullYear();
 let day=Today.getDate();
 let mjesec=Today.getMonth()+1
+if (day<10){
+	day="0"+day;
+}
+console.log(year,day,mjesec)
 const proxy='https://shrouded-temple-39982.herokuapp.com/';
-fetch(`${proxy}http://api.football-data.org/v2/matches/?dateFrom=${year}-${mjesec}-${day}&dateTo=${year}-${mjesec}-${day+1}`, {
+fetch(`${proxy}https://api.football-data.org/v2/matches?dateFrom=${year}-${mjesec}-06&dateTo=${year}-${mjesec}-07`,
+{
 	"method": "GET",
-	"headers": {
+		"headers": {
 		"X-Auth-Token": "2a9c900328554726a0d0122a381955a5",
 	}})
 .then(e=>e.json())
 .then(er=>{
+	console.log(er)
 	everything.push(er.matches)
 	return everything})
 .then(e=>{
@@ -99,6 +105,7 @@ const Comp=(competitions)=>{
 			 };
 			check.push(comp[i].id)
 			}
+			comp.length>1?loader.classList.add('hidden'):loader.classList.remove('hidden')
 		}
 		,1500)
 let loader=document.getElementById('load')
@@ -107,4 +114,3 @@ let loader=document.getElementById('load')
 		loader.classList.add('hidden')
 	},3100)
 })*/
-comp?loader.classList.add('hidden'):loader.classList.remove('hidden')
