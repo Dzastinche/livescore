@@ -48,7 +48,13 @@ body{
         align-items: center;
         padding: 1rem;
         border-bottom:2px solid rgb(175, 224, 183);
+        @media (max-width:930px){
+            justify-content: space-between;
+         }
         &-img{
+            @media (max-width:930px){
+                display: none;
+            }
             display: flex;
             flex-direction: column;
             text-align: center;
@@ -59,6 +65,9 @@ body{
                 height: 10rem;
                 border-radius: 50%;
              }
+             @media (max-width:900px){
+                display:none;
+            }
         }
         // Social icons on header
         & .social-icons{
@@ -79,6 +88,9 @@ body{
             width: 60%;
             display: flex;
             justify-content: space-around;
+            @media (max-width:666px){
+                font-size: 1.5rem;
+             }
             & li{
                 display: flex;
                 justify-content: center;
@@ -204,11 +216,16 @@ flex-direction: column;
     }
 }
 .lower{
-    width: 100%;
     @media (max-width:1200px){
         font-size: 1.6rem;
     }
     @media (max-width:800px){
         font-size: 1.4rem;
     }
+}
+.everything-header-nav{
+    @media (max-width:930px){
+        width: 100%;
+        padding-left: 0px;
+     }
 }
