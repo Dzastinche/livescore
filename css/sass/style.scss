@@ -52,12 +52,12 @@ body{
             justify-content: space-between;
          }
         &-img{
-            @media (max-width:930px){
-                display: none;
-            }
             display: flex;
             flex-direction: column;
             text-align: center;
+            @media (max-width:930px){
+                display: none;
+            }
             & img{
                 filter:blur(1px);
                 margin-top: 1rem;
@@ -106,8 +106,8 @@ body{
         @media (max-width:1080px){
             width: 90%;
             }
-            @media (max-width:800px){
-                font-size: 1.7rem;
+        @media (max-width:800px){
+            font-size: 1.7rem;
             }
     &-item{
         margin-top: 1rem;
